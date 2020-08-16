@@ -1,7 +1,7 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
 import { useParams } from 'react-router';
-import ProfilePage from '../components/ProfilePage';
+import ProfilePage from '../components/ProfilePage/ProfilePage';
 import './Page.css';
 
 const Page: React.FC = () => {

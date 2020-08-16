@@ -1,8 +1,7 @@
 import React from 'react';
 import './ProfilePage.css';
-import './Tweet'
 import { IonList, IonItem, IonThumbnail, IonImg, IonLabel, IonContent } from '@ionic/react';
-import Tweet from './Tweet';
+import Tweet from '../Tweet/Tweet';
 
 interface ContainerProps {
   name: string;
