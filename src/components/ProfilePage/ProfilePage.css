@@ -1,7 +1,8 @@
 
 .profilepic{
-   width:150px;
-   height:150px;
+   /* max-width:20%; */
+   min-width: 100px;
+   height:auto;
    -webkit-border-radius: 50%;
    border: 2px solid #fff;
    border-radius: 50%;
