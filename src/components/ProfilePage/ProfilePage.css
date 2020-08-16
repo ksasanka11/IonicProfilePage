@@ -5,9 +5,20 @@
    border: 2px solid #fff;
    border-radius: 50%;
    box-shadow: 0 0 5px gray;
-   margin-left: 20px;
    margin-top: 80px;
    z-index: 2;
+}
+
+.profileGrid {
+   /* margin-left: 30px; */
+}
+
+.profileDetails {
+   box-shadow: unset;
+   height: 100px;
+   position: relative;
+   min-height: 70px;
+   min-width: 100%;
 }
 
 .coverdiv img{
@@ -21,7 +32,12 @@
    height: 150px;
    position: absolute;
 }
-.followbtn{
-   position: relative;
 
+.followbtn{
+   float: right;
+   margin-top: 150px;
+}
+
+.followRow{
+   z-index: 1;
 }

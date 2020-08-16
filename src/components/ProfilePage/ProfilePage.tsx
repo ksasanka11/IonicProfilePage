@@ -1,13 +1,23 @@
 import React from 'react';
 import './ProfilePage.css';
-import { IonList, IonItem, IonThumbnail, IonImg, IonLabel, IonContent, IonGrid, IonRow, IonCol, IonButton} from '@ionic/react';
+import { IonList, IonCard, IonItem, IonThumbnail, IonImg, IonLabel, IonContent, IonGrid, IonRow, IonCol, IonButton,IonCardSubtitle, IonCardTitle } from '@ionic/react';
 import Tweet from '../Tweet/Tweet';
 
 interface ContainerProps {
   name: string;
 }
 
-// type tweet
+// user details
+const details = {
+  name: "Tony Stark",
+  uid: "@iamironman",
+  dob: "29 May 1970",
+  bio: "Genius. Billionare. Playboy. Philanthropist",
+  followers: "12.5k",
+  following: "1.2k"
+}
+
+// tweets
 const tweets = [
     {
         name: "Sasanka",
@@ -39,26 +49,35 @@ const ProfilePage: React.FC<ContainerProps> = ({ name }) => {
       <div className="coverdiv">
         <img className="coverpic"  src="https://media1.popsugar-assets.com/files/thumbor/XS4YnHClQ1RZMm7gMWAtPORSNA0/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2018/04/30/868/n/1922283/1f2e59ed5ae773b06f2879.82877284_/i/Does-Iron-Man-Die-Avengers-Infinity-War.jpg" />
       </div>
-      <IonGrid>
+      <IonGrid className="profileGrid">
         <IonRow>
           <IonCol size="1" size-sm>
             <img className="profilepic"  src="https://media1.popsugar-assets.com/files/thumbor/XS4YnHClQ1RZMm7gMWAtPORSNA0/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2018/04/30/868/n/1922283/1f2e59ed5ae773b06f2879.82877284_/i/Does-Iron-Man-Die-Avengers-Infinity-War.jpg" />
           </IonCol>
           <IonCol>
-            <IonButton className="followbtn">
+            <IonButton className="followbtn" size="small">
               Follow
             </IonButton>
           </IonCol>
         </IonRow>
+        
         <IonRow>
-          <IonCol>
-            <h3>Tony</h3>
-          </IonCol>
+          <IonCard className="profileDetails">
+            <IonCardTitle style={{ 
+                    fontSize: 22, 
+                    fontWeight: 900
+              }}><b>{details.name}</b></IonCardTitle>
+            <IonCardSubtitle>{details.uid}</IonCardSubtitle>
+            <IonContent style={{
+                    fontSize: 19
+              }}>{details.bio}</IonContent>
+          </IonCard>
         </IonRow>
       </IonGrid>
-      <IonList>
+      <IonList className="tweets">
           {tweets.map((tweet, i) => (
                   <Tweet 
+                      key={i}
                       name={tweet.name}
                       turl={tweet.turl}
                       date={tweet.date}
