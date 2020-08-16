@@ -1,9 +1,7 @@
 
 .profilepic{
-   /* max-width:20%; */
    min-width: 100px;
    height:auto;
-   /* -webkit-border-radius: 50%; */
    border: 2px solid #fff;
    border-radius: 50%;
    box-shadow: 0 0 5px gray;

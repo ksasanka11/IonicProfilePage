@@ -25,6 +25,9 @@ const tweets = [
         date: "9th July 2020",
         uid: "@kosuru.sasanka",
         type: "R",
+        likes: 100,
+        retweets: 25,
+        comments: 9,
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     },
     {
@@ -33,6 +36,9 @@ const tweets = [
         date: "9th July 2020",
         uid: "@kosuru.sasanka",
         type: "L",
+        likes: 120,
+        retweets: 45,
+        comments: 19,
         content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     }
 ];
@@ -70,15 +76,18 @@ const ProfilePage: React.FC<ContainerProps> = ({ name }) => {
       </IonGrid>
       <IonList className="tweets">
           {tweets.map((tweet, i) => (
-            <Tweet 
-                key={i}
-                name={tweet.name}
-                turl={tweet.turl}
-                date={tweet.date}
-                uid={tweet.uid}
-                content={tweet.content}
-                type={tweet.type}
-                />
+                  <Tweet 
+                      key={i}
+                      name={tweet.name}
+                      turl={tweet.turl}
+                      date={tweet.date}
+                      uid={tweet.uid}
+                      content={tweet.content}
+                      type={tweet.type}
+                      likes={tweet.likes}
+                      comments={tweet.comments}
+                      retweets={tweet.retweets}
+                      />
           ))}
       </IonList>
     </div>
