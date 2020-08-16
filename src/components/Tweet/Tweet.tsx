@@ -1,24 +1,50 @@
 import React from 'react';
-import { IonList, IonItem, IonThumbnail, IonImg, IonLabel, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/react';
-
+import './Tweet.css'
+import { IonGrid, IonRow, IonCol, IonList, IonItem, IonThumbnail, IonImg, IonLabel, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon } from '@ionic/react';
+import { heart, gitCompare  } from 'ionicons/icons';
+import { type } from 'os';
 interface ContainerProps {
   name: string;
   turl: string;
   date: string;
   uid: string;
   content: string;
+  type: string;
 }
 
-const Tweet: React.FC<ContainerProps> = ({ name, turl, date, uid, content }) => {
+const Tweet: React.FC<ContainerProps> = ({ name, turl, date, uid, content, type }) => {
   return (
     <div className="container">
       <IonCard>
-        <IonThumbnail className="profilepic">
-            <img src={turl} />
-        </IonThumbnail>
+        
         <IonCardHeader>
-          <IonCardTitle>{name}</IonCardTitle>
-          <IonCardSubtitle>{uid}</IonCardSubtitle>
+          <IonGrid>
+            <IonRow>
+              <IonCol size="auto">
+                  <IonIcon  md={type=="R"? gitCompare:heart} ios={type=="R"? gitCompare:heart}/>
+              </IonCol>
+              <IonCol>
+                  <IonCardSubtitle>
+                    {type=="R"? "Retweeted": "Liked"}
+                  </IonCardSubtitle>
+              </IonCol>
+            </IonRow>
+            <IonRow>
+              <IonCol size="auto">
+                <div>
+                  <IonThumbnail>
+                      <img className="tweetprofilepic" src={turl} />
+                  </IonThumbnail>
+                </div>
+              </IonCol>
+              <IonCol>
+                <div>
+                  <IonCardTitle>{name}</IonCardTitle>
+                  <IonCardSubtitle>{uid}</IonCardSubtitle>
+                </div>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
         </IonCardHeader>
         <IonCardContent>
           {content}
