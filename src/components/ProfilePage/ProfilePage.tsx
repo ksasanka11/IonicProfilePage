@@ -30,10 +30,18 @@ const tweets = [
 const ProfilePage: React.FC<ContainerProps> = ({ name }) => {
   return (
     <div className="container">
+      <div className="coverdiv">
+        <img className="coverpic"  src="https://media1.popsugar-assets.com/files/thumbor/XS4YnHClQ1RZMm7gMWAtPORSNA0/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2018/04/30/868/n/1922283/1f2e59ed5ae773b06f2879.82877284_/i/Does-Iron-Man-Die-Avengers-Infinity-War.jpg" />
+      </div>
       <IonGrid>
         <IonRow>
           <IonCol size="1" size-sm>
             <img className="profilepic"  src="https://media1.popsugar-assets.com/files/thumbor/XS4YnHClQ1RZMm7gMWAtPORSNA0/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2018/04/30/868/n/1922283/1f2e59ed5ae773b06f2879.82877284_/i/Does-Iron-Man-Die-Avengers-Infinity-War.jpg" />
+          </IonCol>
+        </IonRow>
+        <IonRow>
+          <IonCol>
+            <h3>Tony</h3>
           </IonCol>
         </IonRow>
       </IonGrid>
