@@ -21,9 +21,9 @@ const details = {
 const tweets = [
     {
         name: "Sasanka",
-        turl: "https://pbs.twimg.com/profile_images/969619375564062728/x_zXQ4Oz_400x400.jpg",
+        turl: "https://pyxis.nymag.com/v1/imgs/ab1/883/f860950330ce9c2c852139d598a0241bf2-04-doctor-strange-red-cloak.rhorizontal.w700.jpg",
         date: "9th July 2020",
-        uid: "@kosuru.sasanka",
+        uid: "@doctor.strange",
         type: "R",
         likes: 100,
         retweets: 25,
@@ -32,9 +32,9 @@ const tweets = [
     },
     {
         name: "Sasanka",
-        turl: "https://pbs.twimg.com/profile_images/969619375564062728/x_zXQ4Oz_400x400.jpg",
+        turl: "https://pyxis.nymag.com/v1/imgs/ab1/883/f860950330ce9c2c852139d598a0241bf2-04-doctor-strange-red-cloak.rhorizontal.w700.jpg",
         date: "9th July 2020",
-        uid: "@kosuru.sasanka",
+        uid: "@doctor.strange",
         type: "L",
         likes: 120,
         retweets: 45,
